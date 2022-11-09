@@ -6,9 +6,6 @@ def linear_search(list, param):
     for item in list:
         if item == param:
             end = date.now().time()
-            print(f"Search completed in {end.second - start.second} minutes {end.microsecond - start.microsecond }")
-
-            return item
-    return "param not found"
+            return f"Search completed in {end.second - start.second} seconds {end.microsecond - start.microsecond } microseconds"
 
 print( linear_search(data_int, 999999) )

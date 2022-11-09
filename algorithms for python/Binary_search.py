@@ -15,5 +15,6 @@ def binary_search(list, param):
             high = mid - 1
         else:
             low = mid + 1
+    return None
 
 print( binary_search(data_int, 3) )

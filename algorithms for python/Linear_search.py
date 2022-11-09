@@ -8,4 +8,4 @@ def linear_search(list, param):
             end = date.now().time()
             return f"Search completed in {end.second - start.second} seconds {end.microsecond - start.microsecond } microseconds"
 
-print( linear_search(data_int, 999999) )
+print( linear_search(data_int, 999_999) )

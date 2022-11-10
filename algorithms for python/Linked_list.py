@@ -22,10 +22,14 @@ class LindekList:
         self.head = new_node
 
     def inserAfter(self, prev_node, new_data):
+        """Biron tugundan so'ng tugun qoshish"""
+        if prev_node is None:
+            print("Tugun mavjud emas")
+            return
+        new_node = Node(new_data)
+        new_node.next = prev_node.next
+        prev_node.next = new_node
 
-
-
-        pass
 
 
 llist = LindekList()
@@ -37,6 +41,8 @@ llist.head.next = tuesday
 tuesday.next = wednesday
 llist.push("Yakshanba")
 
+
+llist.inserAfter(llist.head.next, "Dushanba kechasi")
 llist.printList()
 
 

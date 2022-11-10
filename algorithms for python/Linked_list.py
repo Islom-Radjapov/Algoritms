@@ -21,6 +21,8 @@ class LindekList:
         new_node.next = self.head
         self.head = new_node
 
+    def inserAfter(self, prev_node, new_data):
+        pass
 
 
 llist = LindekList()

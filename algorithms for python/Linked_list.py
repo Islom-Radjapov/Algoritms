@@ -22,6 +22,9 @@ class LindekList:
         self.head = new_node
 
     def inserAfter(self, prev_node, new_data):
+
+
+
         pass
 
 

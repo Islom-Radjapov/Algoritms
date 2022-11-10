@@ -39,14 +39,15 @@ wednesday = Node("Chorshanba")
 
 llist.head.next = tuesday
 tuesday.next = wednesday
+
 llist.push("Yakshanba")
+llist.inserAfter(llist.head.next.next, "Seshanba kechasi")
 
-
-llist.inserAfter(llist.head.next, "Dushanba kechasi")
 llist.printList()
 
 
-"""                      Linked listlar 3hil turda boladi
+"""    
+                  Linked listlar 3hil turda boladi
         1. SINGLY Linked list = Bir tomonlami royhat
         2. CICRULAR Linked list = Aylanma royhat
         3. DOUBLE Lindek list = Ikki tomonlami royhat

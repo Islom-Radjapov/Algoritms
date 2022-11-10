@@ -30,6 +30,35 @@ class LindekList:
         new_node.next = prev_node.next
         prev_node.next = new_node
 
+    def append_(self, new_data):
+        """List oxiriga element qoshish"""
+        new_node = Node(new_data)
+        if self.head is None:
+            self.head = new_node
+            return
+        last = self.head
+        # listni oxirgi elementiga borish sikli
+        while last.next:
+            last = last.next
+        last.next = new_node
+
+    def deleteNode(self, key):
+        """Listdan elementni ochirish"""
+        temp = self.head
+        if temp and temp.data == key:
+            self.head = temp.next
+            temp = None
+            return
+        while temp:
+            if temp.data == key:
+                break
+            prev = temp
+            temp = temp.next
+
+        if temp == None:
+            return
+        prev.next = temp.next
+        temp = None
 
 
 llist = LindekList()
@@ -41,9 +70,15 @@ llist.head.next = tuesday
 tuesday.next = wednesday
 
 llist.push("Yakshanba")
-llist.inserAfter(llist.head.next.next, "Seshanba kechasi")
 
+llist.inserAfter(llist.head.next.next, "Seshanba kechasi")
+llist.append_("Juma")
 llist.printList()
+llist.deleteNode("Seshanba kechasi")
+print("- - - - - - - - - - - - - - -")
+llist.printList()
+
+
 
 
 """    

@@ -1,9 +1,21 @@
 def abs():
     pass
 
-
+print("ASDFGH")
 
 """"agagagagasgasgazsga
 gaasgasgasg
-asgaga
+asgagaaga
+gag
+aga
+ga
+g
+ag
+a
+sg
+a
+sg
+a
+sg
+
 """

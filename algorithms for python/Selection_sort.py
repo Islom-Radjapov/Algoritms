@@ -1,21 +1,16 @@
-def abs():
-    pass
+from Data import data_confused
 
-print("ASDFGH")
+# Kopayib boruvchi tartiblash
+def sort_asc(data):
+    res = sorted(data)
+    return res
 
-""""agagagagasgasgazsga
-gaasgasgasg
-asgagaaga
-gag
-aga
-ga
-g
-ag
-a
-sg
-a
-sg
-a
-sg
+# Pasayib boruvchi tartiblash
+def sort_desc(data):
+    res = sorted(data, reverse=True)
+    return res
 
-"""
+
+print(data_confused)
+print(sort_asc(data_confused))
+print(sort_desc(data_confused))

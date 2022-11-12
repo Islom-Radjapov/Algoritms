@@ -1,15 +1,19 @@
 from datetime import datetime as date
 
-def numJewelsInStones( jewels, stones):
+def test():
+
+    # test 1
     start = date.now().time()
-    result = 0
-    for x in range(9999999):
-        x
+    for x in range(99999999):
+        x + 5
     end = date.now().time()
     print( f"Search completed in {end.second - start.second} seconds {end.microsecond - start.microsecond} microseconds" )
 
-jewels = "aA"
-stones = "aAAbbbb"
+    # test 2
+    start = date.now().time()
+    [x + 5 for x in range(99999999)]
+    end = date.now().time()
+    print(f"Search completed in {end.second - start.second} seconds {end.microsecond - start.microsecond} microseconds")
 
 
-print(numJewelsInStones(jewels, stones))
+test()

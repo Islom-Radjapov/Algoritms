@@ -40,8 +40,26 @@ def my_strrchr(param_1, param_2):
         x -= 1
 
 
-print( my_strrchr("abcabc", "b") )
+# print( my_strrchr("abcabc", "b") )
+#
+# print( my_strrchr( "121212", "2") )
+#
+# print( my_strrchr("abc", "d" ) )
+param8 = ["xoxAoxo", "xoxAox", "oxAox", "oxo", "A", "ooxAoxx", "oxooxo", "Axo"]
+def str_maxlenoc(p1, p2):
+    res1 = 0
+    for x in p1:
+        for y in x:
+            if y in x:
+                continue
+            else:
+                break
+        res1 += 1
+    return res1
 
-print( my_strrchr( "121212", "2") )
+print( str_maxlenoc(["xoxAoxo", "xoxAox", "oxAox"],  3) )
 
-print( my_strrchr("abc", "d" ) )
+print( str_maxlenoc(param8, 8) )
+
+
+print( param8[0].split()[0] in param8[1].split() )

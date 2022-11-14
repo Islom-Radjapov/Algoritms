@@ -1,4 +1,5 @@
 from datetime import datetime as date
+import numpy as np
 
 def test():
 
@@ -57,9 +58,19 @@ def str_maxlenoc(p1, p2):
         res1 += 1
     return res1
 
-print( str_maxlenoc(["xoxAoxo", "xoxAox", "oxAox"],  3) )
+# print( str_maxlenoc(["xoxAoxo", "xoxAox", "oxAox"],  3) )
+#
+# print( str_maxlenoc(param8, 8) )
+#
+#
+# print( param8[0].split()[0] in param8[1].split() )
 
-print( str_maxlenoc(param8, 8) )
 
+def isPerfectSquare(num):
+    a = num ** 0.5
+    print( a )
+    print(a % 1 )
+    print( np.sqrt(num) )
+    return (num ** 0.5) % 1 == 0
 
-print( param8[0].split()[0] in param8[1].split() )
+print( "return=>", isPerfectSquare(14) )

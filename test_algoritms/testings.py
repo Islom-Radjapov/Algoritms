@@ -48,22 +48,65 @@ def my_strrchr(param_1, param_2):
 # print( my_strrchr("abc", "d" ) )
 param8 = ["xoxAoxo", "xoxAox", "oxAox", "oxo", "A", "ooxAoxx", "oxooxo", "Axo"]
 def str_maxlenoc(p1, p2):
-    res1 = 0
-    for x in p1:
-        for y in x:
-            if y in x:
+    def test(p1):
+        for string in p1:
+            for char in string:
+                for rand in p1:
+                    if string == rand:
+                        continue
+                    elif char in rand:
+                        continue
+                    else:
+                        return False
+        return True
+    # if test(p1=p1):
+    """ ["x oxAox o", "x oxAox", "oxAox"] """
+    param = p1[0]
+    start = 0
+    end = len(param)
+    res1 = []
+    for p in range( int( len(param) / 2 ) ):
+        for rand in p1[1:]:
+            if param[start:] in rand:
+                print("start", param[start:] )
+                res1.append(param[start:end])
+                continue
+            elif param[:end] in rand:
+                print( "end", param[:end] )
+                # print(end)
+                # print(param[:end])
+                res1.append(param[start:end])
                 continue
             else:
+                res1 = []
                 break
-        res1 += 1
-    return res1
+        if len(res1) == p2:
+            return res1
+        start += 1
+        end -= 1
+    return
 
-# print( str_maxlenoc(["xoxAoxo", "xoxAox", "oxAox"],  3) )
-#
+
+
+        # for x in p1[1:]:
+        #     for y in range(len(p1[0])):
+        #         if p1[0][y] in x:
+        #             if p1[0][y:] in x:
+        #                 return p1[0][y:]
+        #             return p1[0][y]
+
+
+
+print( str_maxlenoc(["xoxAoxo", "xoxAox", "oxAox"],  3) )
+
 # print( str_maxlenoc(param8, 8) )
-#
-#
+
+
 # print( param8[0].split()[0] in param8[1].split() )
+
+
+
+
 
 
 def isPerfectSquare(num):
@@ -73,4 +116,4 @@ def isPerfectSquare(num):
     print( np.sqrt(num) )
     return (num ** 0.5) % 1 == 0
 
-print( "return=>", isPerfectSquare(14) )
+# print( "return=>", isPerfectSquare(14) )

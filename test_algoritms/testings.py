@@ -1,5 +1,7 @@
-# from datetime import datetime as date
-# import numpy as np
+from datetime import datetime as date
+import numpy as np
+
+
 #
 # def test():
 #
@@ -135,53 +137,66 @@
 # # print( "return=>", isPerfectSquare(14) )
 #
 #
+#
+# def transform_to_chessboard(board):
+#     n = len(board)
+#     if any(board[0][0] ^ board[i][0] ^ board[0][j] ^ board[i][j] for i in range(n) for j in range(n)):
+#       return -1
+#
+#     rowSum = sum(board[0])
+#     colSum = sum(board[i][0] for i in range(n))
+#
+#     if rowSum != n // 2 and rowSum != (n + 1) // 2:
+#       return -1
+#     if colSum != n // 2 and colSum != (n + 1) // 2:
+#       return -1
+#
+#     rowSwaps = sum(board[i][0] == (i & 1) for i in range(n))
+#     colSwaps = sum(board[0][i] == (i & 1) for i in range(n))
+#
+#     if n & 1:
+#       if rowSwaps & 1:
+#         rowSwaps = n - rowSwaps
+#       if colSwaps & 1:
+#         colSwaps = n - colSwaps
+#     else:
+#       rowSwaps = min(rowSwaps, n - rowSwaps)
+#       colSwaps = min(colSwaps, n - colSwaps)
+#
+#     return (rowSwaps + colSwaps) // 2
+#
+#
+# print( transform_to_chessboard( [ [0,1,1,0],
+#                                   [0,1,1,0],
+#                                   [1,0,0,1],
+#                                   [1,0,0,1] ] ) )
+#
+# print( transform_to_chessboard(  [ [0, 1],
+#                                    [1, 0] ] ) )
+#
+# print( transform_to_chessboard( [  [1, 0],
+#                                    [1, 0] ] ) )
+# def my_average_mark(inList):
+#     total = 0
+#     if inList:
+#         for i in range( len(inList) ):
+#             total +=  inList[i]['integer']
+#
+#         return  total / len(inList)
+#     return total
+#
+#
+# print( my_average_mark([ {"string": "Quentin", "integer": 1},
+#                   {"string": "Fred", "integer": 1},
+#                   {"string": "Julia", "integer": 18},
+#                   {"string": "stephanie", "integer": 13} ] ) )
+#
+# print(my_average_mark( [
+#         {"string": "John", "integer": 7},
+#         {"string": "Margot", "integer": 8},
+#         {"string": "Jules", "integer": 4},
+#         {"string": "Marco", "integer": 19}
+#        ]))
 
-def transform_to_chessboard(board):
-    n = len(board)
-    if any(board[0][0] ^ board[i][0] ^ board[0][j] ^ board[i][j] for i in range(n) for j in range(n)):
-      return -1
-
-    rowSum = sum(board[0])
-    colSum = sum(board[i][0] for i in range(n))
-
-    if rowSum != n // 2 and rowSum != (n + 1) // 2:
-      return -1
-    if colSum != n // 2 and colSum != (n + 1) // 2:
-      return -1
-
-    rowSwaps = sum(board[i][0] == (i & 1) for i in range(n))
-    colSwaps = sum(board[0][i] == (i & 1) for i in range(n))
-
-    if n & 1:
-      if rowSwaps & 1:
-        rowSwaps = n - rowSwaps
-      if colSwaps & 1:
-        colSwaps = n - colSwaps
-    else:
-      rowSwaps = min(rowSwaps, n - rowSwaps)
-      colSwaps = min(colSwaps, n - colSwaps)
-
-    return (rowSwaps + colSwaps) // 2
-
-
-print( transform_to_chessboard( [ [0,1,1,0],
-                                  [0,1,1,0],
-                                  [1,0,0,1],
-                                  [1,0,0,1] ] ) )
-
-print( transform_to_chessboard(  [ [0, 1],
-                                   [1, 0] ] ) )
-
-print( transform_to_chessboard( [  [1, 0],
-                                   [1, 0] ] ) )
-
-
-
-def my_average_mark(inList):
-    total = 0.0
-    if not inList:
-        return total
-    for i in range( len(inList) ):
-        total += float( inList[i]['integer']  )
-
-    return (total / float( len(inList) ) )
+def can_place_flowers(flowerbed, n)
+    pass

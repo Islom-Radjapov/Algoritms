@@ -1,7 +1,5 @@
 from datetime import datetime as date
 import numpy as np
-
-
 #
 # def test():
 #
@@ -197,6 +195,26 @@ import numpy as np
 #         {"string": "Jules", "integer": 4},
 #         {"string": "Marco", "integer": 19}
 #        ]))
+#
+# def can_place_flowers(flowerbed, n):
+#     count = 0
+#     for i in range(len(flowerbed)):
+#         # Check if the current plot is empty.
+#         if flowerbed[i] == 0:
+#             # Check if the left and right plots are empty.
+#             empty_left_plot = (i == 0) or (flowerbed[i - 1] == 0)
+#             empty_right_lot = (i == len(flowerbed) - 1) or (flowerbed[i + 1] == 0)
+#
+#             # If both plots are empty, we can plant a flower here.
+#             if empty_left_plot and empty_right_lot:
+#                 flowerbed[i] = 1
+#                 count += 1
+#
+#     return count >= n
+#
+# print( can_place_flowers( [1,0,0,0,1], 1 ) )
+# print( can_place_flowers( [1, 0, 0, 0, 0, 0, 1], 2  ) )
 
-def can_place_flowers(flowerbed, n)
-    pass
+def reverseString(s):
+    return s.reverse()
+print( reverseString( ["h","e","l","l","o"] ) )

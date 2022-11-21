@@ -1,5 +1,5 @@
 from datetime import datetime as date
-import numpy as np
+# import numpy as np
 #
 # def test():
 #
@@ -214,21 +214,34 @@ import numpy as np
 #
 # print( can_place_flowers( [1,0,0,0,1], 1 ) )
 # print( can_place_flowers( [1, 0, 0, 0, 0, 0, 1], 2  ) )
+# def reverseString(s):
+#     return s.reverse()
+# print( reverseString( ["h","e","l","l","o"] ) )
+#
+# class Solution:
+#     def reverseString(self, s):
+#         """
+#         Do not return anything, modify s in-place instead.
+#         """
+#         l=0
+#         r=len(s)-1
+#         while l<r:
+#             s[l],s[r]=s[r],s[l]
+#             l+=1
+#             r-=1
+# import itertools
+# def runningSum( nums ):
+    # return list( sum(y for y in nums[:x+1]) for x in range( len(nums) ) )
+    # return list( itertools.accumulate(nums) )
 
-def reverseString(s):
-    return s.reverse()
-print( reverseString( ["h","e","l","l","o"] ) )
 
+def runningSum(nums):
+    s = nums[0]
+    for x in range(1, len(nums) ):
+        s += nums[x]
+        nums[x] = s
+    return nums
 
-
-class Solution:
-    def reverseString(self, s):
-        """
-        Do not return anything, modify s in-place instead.
-        """
-        l=0
-        r=len(s)-1
-        while l<r:
-            s[l],s[r]=s[r],s[l]
-            l+=1
-            r-=1
+print( runningSum([1,2,3,4]) )      # 1,3,6,10]
+print( runningSum( [1,1,1,1,1] ) )  # [1,2,3,4,5]
+print( runningSum( [3,1,2,10,1] ) ) # [3,4,6,16,17]

@@ -243,9 +243,14 @@ from datetime import datetime as date
 # print( runningSum([1,2,3,4]) )      # 1,3,6,10]
 # print( runningSum( [1,1,1,1,1] ) )  # [1,2,3,4,5]
 # print( runningSum( [3,1,2,10,1] ) ) # [3,4,6,16,17]
-
+#
 # def restoreString( s, indices):
-#     return ''.join( [x[1] for x in sorted( list( zip(indices, s ) ) ) ] )
+#     res = ''
+#     for x in range(len(indices)):
+#         y = indices.index(x)
+#         res += s[y]
+#     print(res)
+    # return ''.join( [x[1] for x in sorted( list( zip(indices, s ) ) ) ] )
 #
 # s = "codeleet"
 # indices = [4, 5, 6, 7, 0, 2, 1, 3]

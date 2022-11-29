@@ -233,15 +233,13 @@ from datetime import datetime as date
 # def runningSum( nums ):
     # return list( sum(y for y in nums[:x+1]) for x in range( len(nums) ) )
     # return list( itertools.accumulate(nums) )
-
-
-def runningSum(nums):
-    s = nums[0]
-    for x in range(1, len(nums) ):
-        s += nums[x]
-        nums[x] = s
-    return nums
-
-print( runningSum([1,2,3,4]) )      # 1,3,6,10]
-print( runningSum( [1,1,1,1,1] ) )  # [1,2,3,4,5]
-print( runningSum( [3,1,2,10,1] ) ) # [3,4,6,16,17]
+# def runningSum(nums):
+#     s = nums[0]
+#     for x in range(1, len(nums) ):
+#         s += nums[x]
+#         nums[x] = s
+#     return nums
+#
+# print( runningSum([1,2,3,4]) )      # 1,3,6,10]
+# print( runningSum( [1,1,1,1,1] ) )  # [1,2,3,4,5]
+# print( runningSum( [3,1,2,10,1] ) ) # [3,4,6,16,17]

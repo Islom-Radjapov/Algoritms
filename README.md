@@ -1,2 +1,2 @@
 # Algoritms
-Learning algoritms
+Learning algoritms for python

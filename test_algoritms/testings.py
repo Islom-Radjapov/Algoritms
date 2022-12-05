@@ -260,3 +260,9 @@ from datetime import datetime as date
 # word1 = ["a", "cb"]
 # word2 = ["ab", "c"]
 # print( arrayStringsAreEqual( word1, word2) )
+def isPowerOfTwo(n):
+    x = 1
+    while x < n:
+        x *= 2
+    return x == n
+print(isPowerOfTwo(15))

@@ -255,9 +255,8 @@ from datetime import datetime as date
 # s = "codeleet"
 # indices = [4, 5, 6, 7, 0, 2, 1, 3]
 # restoreString(s, indices)
-
-def arrayStringsAreEqual( word1, word2):
-    return "".join(word1) == "".join(word2)
-word1 = ["a", "cb"]
-word2 = ["ab", "c"]
-print( arrayStringsAreEqual( word1, word2) )
+# def arrayStringsAreEqual( word1, word2):
+#     return "".join(word1) == "".join(word2)
+# word1 = ["a", "cb"]
+# word2 = ["ab", "c"]
+# print( arrayStringsAreEqual( word1, word2) )

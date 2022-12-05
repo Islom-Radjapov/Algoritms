@@ -257,17 +257,7 @@ from datetime import datetime as date
 # restoreString(s, indices)
 
 def arrayStringsAreEqual( word1, word2):
-    res1 = ""
-    res2 = ""
-    for x in word1:
-        res1 += x
-    for x in word2:
-        res2 += x
-    if res1 == res2:
-        return True
-    else:
-        return False
-
-word1 = ["ab", "c"]
-word2 = ["a", "bc"]
+    return "".join(word1) == "".join(word2)
+word1 = ["a", "cb"]
+word2 = ["ab", "c"]
 print( arrayStringsAreEqual( word1, word2) )

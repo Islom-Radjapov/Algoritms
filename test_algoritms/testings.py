@@ -268,9 +268,5 @@ import math
 #     return x == n
 # print(isPowerOfTwo(32))
 def fizzBuzz(n):
-    return ['Fizz' * (not x % 3) + 'Buzz' * (not x % 5) or str(x) for x in range(1, n + 1)]
-
-# print(fizzBuzz(15))
-
-
-print('Fizz' * (not 2 % 2) + 'Buzz' * (not 1 % 3) or 'num')
+    return ['Fizz' * (not x % 3) + 'Buzz' * (not x % 5) or str(x) for x in range(1, n + 1) ]
+print(fizzBuzz(15))

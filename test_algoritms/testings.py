@@ -260,9 +260,25 @@ from datetime import datetime as date
 # word1 = ["a", "cb"]
 # word2 = ["ab", "c"]
 # print( arrayStringsAreEqual( word1, word2) )
+import math
 # def isPowerOfTwo(n):
 #     x = 1
 #     while x < n:
 #         x *= 2
 #     return x == n
-# print(isPowerOfTwo(16))
+# print(isPowerOfTwo(32))
+def fizzBuzz(n):
+    result = []
+    for x in range(1, n+1):
+        # print(x)
+        if (x % 15) == 0:
+            result.append('FizzBuzz')
+        elif (x % 3) == 0:
+            result.append('Fizz')
+        elif (x % 5) == 0:
+            result.append('Buzz')
+        else:
+            result.append(x)
+    return result
+# ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13","14","FizzBuzz"]
+print(fizzBuzz(15))

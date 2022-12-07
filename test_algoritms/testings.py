@@ -268,17 +268,9 @@ import math
 #     return x == n
 # print(isPowerOfTwo(32))
 def fizzBuzz(n):
-    result = []
-    for x in range(1, n+1):
-        # print(x)
-        if (x % 15) == 0:
-            result.append('FizzBuzz')
-        elif (x % 3) == 0:
-            result.append('Fizz')
-        elif (x % 5) == 0:
-            result.append('Buzz')
-        else:
-            result.append(x)
-    return result
-# ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13","14","FizzBuzz"]
-print(fizzBuzz(15))
+    return ['Fizz' * (not x % 3) + 'Buzz' * (not x % 5) or str(x) for x in range(1, n + 1)]
+
+# print(fizzBuzz(15))
+
+
+print('Fizz' * (not 2 % 2) + 'Buzz' * (not 1 % 3) or 'num')

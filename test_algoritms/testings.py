@@ -270,9 +270,11 @@ import math
 # def fizzBuzz(n):
 #     return ['Fizz' * (not x % 3) + 'Buzz' * (not x % 5) or str(x) for x in range(1, n + 1) ]
 # print(fizzBuzz(15))
-def canBeEqual( target, arr):
-    return "".join(map(str, sorted(target))) == "".join(map(str, sorted(arr)))
-
-target = [1, 2, 3, 4]
-arr = [2, 4, 1, 3]
+# def canBeEqual( target, arr):
+#     return "".join(map(str, sorted(target))) == "".join(map(str, sorted(arr)))
+target = [3,7,9]
+arr = [3,7,11]
+import collections
+def canBeEqual(target, arr):
+        return collections.Counter(target) == collections.Counter(arr)
 print(canBeEqual(target, arr))

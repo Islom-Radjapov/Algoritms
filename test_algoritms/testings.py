@@ -272,9 +272,9 @@ import math
 # print(fizzBuzz(15))
 # def canBeEqual( target, arr):
 #     return "".join(map(str, sorted(target))) == "".join(map(str, sorted(arr)))
-target = [3,7,9]
-arr = [3,7,11]
-import collections
-def canBeEqual(target, arr):
-        return collections.Counter(target) == collections.Counter(arr)
-print(canBeEqual(target, arr))
+# target = [3,7,9]
+# arr = [3,7,11]
+# import collections
+# def canBeEqual(target, arr):
+#         return collections.Counter(target) == collections.Counter(arr)
+# print(canBeEqual(target, arr))

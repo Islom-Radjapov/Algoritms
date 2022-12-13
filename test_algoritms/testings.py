@@ -280,14 +280,8 @@ import math
 # print(canBeEqual(target, arr))
 
 def kLengthApart(nums, k):
-    window = 0
-    for i, num in enumerate(nums):
-        window += num
-        if i > k:
-            window -= nums[i-k-1]
-        if window > 1:
-            return False
-    return True
+    A = [i for i, a in enumerate(nums) if a]
+    return all(A[i + 1] - A[i] > k for i in range(len(A) - 1))
 
 nums = [1,0,0,1,0,1]
 k = 2

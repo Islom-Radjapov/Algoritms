@@ -278,3 +278,17 @@ import math
 # def canBeEqual(target, arr):
 #         return collections.Counter(target) == collections.Counter(arr)
 # print(canBeEqual(target, arr))
+
+def kLengthApart(nums, k):
+    window = 0
+    for i, num in enumerate(nums):
+        window += num
+        if i > k:
+            window -= nums[i-k-1]
+        if window > 1:
+            return False
+    return True
+
+nums = [1,0,0,1,0,1]
+k = 2
+print(kLengthApart(nums, k))

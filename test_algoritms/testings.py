@@ -278,10 +278,9 @@ import math
 # def canBeEqual(target, arr):
 #         return collections.Counter(target) == collections.Counter(arr)
 # print(canBeEqual(target, arr))
-
-def kLengthApart(nums, k):
-    loc = [x for x, y in enumerate(nums) if y]
-    return all(loc[x + 1] - loc[x] > k for x in range(len(loc) - 1))
-nums = [1,0,0,0,1,0,0,1]
-k = 2
-print(kLengthApart(nums, k))
+# def kLengthApart(nums, k):
+#     loc = [x for x, y in enumerate(nums) if y]
+#     return all(loc[x + 1] - loc[x] > k for x in range(len(loc) - 1))
+# nums = [1,0,0,0,1,0,0,1]
+# k = 2
+# print(kLengthApart(nums, k))

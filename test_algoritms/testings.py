@@ -286,11 +286,6 @@ import math
 # print(kLengthApart(nums, k))
 # def buildArray(nums):
 #     return [nums[num] for num in nums]
-# def buildArray(nums):
-#     ans = list(range(len(nums)))
-#     print(ans)
-#     for i, _ in enumerate(nums):
-#         ans[i] = nums[nums[i]]
-#     return ans
+
 # nums = [5,0,1,2,3,4] #[0,2,1,5,3,4]
 # print(buildArray(nums))

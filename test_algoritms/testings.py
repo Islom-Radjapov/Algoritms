@@ -284,8 +284,7 @@ import math
 # nums = [1,0,0,0,1,0,0,1]
 # k = 2
 # print(kLengthApart(nums, k))
-def buildArray(nums):
-    return [nums[num] for num in nums]
-
-nums = [5,0,1,2,3,4] #[0,2,1,5,3,4]
-print(buildArray(nums))
+# def buildArray(nums):
+#     return [nums[num] for num in nums]
+# nums = [5,0,1,2,3,4] #[0,2,1,5,3,4]
+# print(buildArray(nums))

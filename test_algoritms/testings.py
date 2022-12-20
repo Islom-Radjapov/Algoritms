@@ -290,11 +290,7 @@ import math
 # nums = [5,0,1,2,3,4] #[0,2,1,5,3,4]
 # print(buildArray(nums))
 def maxProduct(nums):
-    x1 = max(nums)
-    nums.remove(x1)
-    x2 = max(nums)
-    nums.remove(x2)
-    return (x1 - 1) * (x2 - 1)
-
+    nums.sort()
+    return (nums[-1] - 1) * (nums[-2] - 1)
 nums = [3,4,5,2]
-maxProduct(nums)
+print(maxProduct(nums))

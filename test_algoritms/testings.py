@@ -296,7 +296,18 @@ import math
 # print(maxProduct(nums))
 
 def isKabisa(year):
-    if year % 400 == 0 or (year % 100 != 0 and year % 4 == 0):
+    if year % 400 == 0 or (year % 4 == 0 and year % 100 != 0):
         return True
     return False
-print(isKabisa(2012))
+# print(isKabisa(1900))
+
+
+def dayOfYear(date):
+    year, month, day = map(int, date.split('-'))
+    days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    if month > 2 and (year % 400 == 0 or (year % 4 == 0 and year % 100 != 0)):
+        days[1] = 29
+    return day + sum(days[:month-1])
+
+# print(dayOfYear("2000-02-10"))
+print(dayOfYear("2000-03-09"))

@@ -295,15 +295,8 @@ import math
 # nums = [3,4,5,2]
 # print(maxProduct(nums))
 
-from datetime import date
-def kabisa(year):
-    if (year % 400 == 0 or not year % 100 != 0) and year % 4 == 0:
+def isKabisa(year):
+    if year % 400 == 0 or (year % 100 != 0 and year % 4 == 0):
         return True
     return False
-print(kabisa(2004))
-
-
-
-# print(not 1900 % 4)
-# print(1900 % 4 == 0)
-# print(1900 % 100)
+print(isKabisa(2012))

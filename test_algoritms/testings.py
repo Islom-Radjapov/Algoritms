@@ -294,20 +294,9 @@ import math
 #     return (nums[-1] - 1) * (nums[-2] - 1)
 # nums = [3,4,5,2]
 # print(maxProduct(nums))
-
-def isKabisa(year):
-    if year % 400 == 0 or (year % 4 == 0 and year % 100 != 0):
-        return True
-    return False
-# print(isKabisa(1900))
-
-
-def dayOfYear(date):
-    year, month, day = map(int, date.split('-'))
-    days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-    if month > 2 and (year % 400 == 0 or (year % 4 == 0 and year % 100 != 0)):
-        days[1] = 29
-    return day + sum(days[:month-1])
-
-# print(dayOfYear("2000-02-10"))
-print(dayOfYear("2000-03-09"))
+# from datetime import date
+# def dayOfYear(d):
+#         Y, M, D = map(int, d.split('-'))
+#         return int((date(Y, M, D) - date(Y, 1, 1)).days + 1)
+#
+# print(dayOfYear("2000-01-01"))
